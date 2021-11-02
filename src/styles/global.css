@@ -1,0 +1,34 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #3a3a3a;
+}
+.link {
+    float: right;
+}
+
+.link a {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.navbar-area {
+    background: #0d6efd;
+}
+.logo a {
+    display: inline-block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}

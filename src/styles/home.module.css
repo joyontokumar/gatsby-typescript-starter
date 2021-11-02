@@ -1,0 +1,13 @@
+.header {
+    color: #3a3a3a;
+    padding: 10px;
+    background: red;
+}
+.btn {
+    color: #fff;
+    background-color: red;
+    padding: 6px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
