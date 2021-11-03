@@ -12,18 +12,36 @@ const Projects = ({ data }) => {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Portfolio Page</h2>
-                            <img
-                                className="d-block mb-4"
-                                src="/joyonto.jpeg"
-                                alt="result"
-                            />
                             <Link to="/" className={btn}>
                                 Home
                             </Link>
-                            <div className="project-list">
-                                {projects?.map((project) => (
-                                    <Link to="/">{project?.title}</Link>
-                                ))}
+                            <div className="project-list mt-3">
+                                <div className="row">
+                                    {projects?.map((project) => (
+                                        <Link
+                                            className="col-lg-4"
+                                            to={
+                                                `/projects/` +
+                                                project.frontmatter.slug
+                                            }
+                                            key={project.id}
+                                        >
+                                            <div>
+                                                <img
+                                                    className="d-block mb-4 w-100"
+                                                    src="/2.png"
+                                                    alt="result"
+                                                />
+                                                <h3>
+                                                    {project.frontmatter.title}
+                                                </h3>
+                                                <p>
+                                                    {project.frontmatter.stack}
+                                                </p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

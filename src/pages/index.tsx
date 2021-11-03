@@ -1,8 +1,9 @@
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import React from 'react';
 import Layout from '../components/Layout';
 import { btn } from '../styles/home.module.css';
-const Home = () => {
+const Home = ({ data }) => {
     return (
         <Layout>
             <div className="home-page p-5">
@@ -10,10 +11,9 @@ const Home = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>Home page</h2>
-                            <img
-                                className="d-block mb-4 mt-3"
-                                src="/joyonto.jpeg"
-                                alt="result"
+                            <Img
+                                className="mb-5"
+                                fluid={data.file.childImageSharp.fluid}
                             />
                             <Link to="/about" className={btn}>
                                 Go
@@ -26,3 +26,14 @@ const Home = () => {
     );
 };
 export default Home;
+export const query = graphql`
+    query Banner {
+        file(relativePath: { eq: "joyonto.jpeg" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`;
