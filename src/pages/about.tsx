@@ -10,6 +10,11 @@ const About = () => {
                     <div className="row">
                         <div className="col-lg-12">
                             <h2>About page</h2>
+                            <img
+                                className="d-block mb-4"
+                                src="/2.png"
+                                alt="result"
+                            />
                             <Link to="/" className={btn}>
                                 Back
                             </Link>
